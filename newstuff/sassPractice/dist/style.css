@@ -1,0 +1,42 @@
+div#functiondiv {
+  background-color: #ff9cce; }
+
+.mydiv {
+  height: 50px;
+  width: 100px;
+  background-color: yellow; }
+
+ul {
+  border: 2px solid green; }
+  ul li {
+    border: 1px solid blue; }
+
+div#functiondiv, div#mixindiv {
+  height: 100px;
+  width: 100px; }
+
+div#mixindiv {
+  background-color: hotpink; }
+
+/*
+ Compass has a mixin called background. It's so robust, 
+ that you can pass just about whatever you want to that thing 
+ that it will output what you need. Images, gradients, and any 
+ combination of them comma-separated, and you'll get what you need (vendor prefixes and all).
+*/
+div#gradient {
+  background: -owg-linear-gradient(top, green, red);
+  background: -webkit-linear-gradient(top, green, red);
+  background: -moz-linear-gradient(top, green, red);
+  background: -o-linear-gradient(top, green, red);
+  -pie-background: -pie-linear-gradient(top, green, red);
+  background: linear-gradient(top, green, red);
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg); }
+
+div#gradient {
+  height: 100px;
+  width: 100px; }

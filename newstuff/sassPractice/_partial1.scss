@@ -1,0 +1,5 @@
+//using functions
+div#functiondiv{
+    @extend %dummymixin;
+    background-color: lighten(hotpink,10%);
+}

@@ -1,0 +1,81 @@
+//using variables 
+@peachcolor : #ed7456;
+.mydiv{
+    height: 50px;
+    width:100px;
+    background-color:@peachcolor;
+}
+//nesting
+ul{
+    border: 2px solid greenyellow;
+    li{
+        border: 1px solid blue
+    }
+}
+//mixins
+.dummyclass(){
+    height:100px;
+    width:100px;
+}
+div#mixindiv{
+    .dummyclass;
+    background-color: firebrick;
+}
+//functions
+/*
+Color operations generally take parameters in the same units as the values they are changing, 
+and percentages are handled as absolutes, so increasing a 10% value by 10% results in 20%. 
+Set the option method parameter to relative for relative percentages. When using relative percentages 
+increasing a 10% value by 10% results in 11%
+*/
+
+div#functiondiv{
+  height:100px;
+    width:100px;
+    background-color:lighten(red,30%);
+}
+div#container{
+    height:100px;
+}
+@purered:orange;
+@huenumber:floor(hue(@purered));
+@hue:unit(@huenumber, px);
+@saturation:saturation(@purered);
+@lightness:lightness(@purered);
+div#huediv{
+    height:@hue;
+    width:10px;
+    float: left;
+    background-color: green;
+}
+div#saturationdiv{
+    height:@saturation;
+    width:10px;
+    float: left;
+    background-color: blue;
+}
+div#lightnessdiv{
+    height:@lightness;
+    width:10px;
+    float: left;
+    background-color: yellow;
+}
+/*
+Floats work well if all the images in the grid are the same height.
+ As soon as they aren’t, which is most of the time, floats get hung up behind whichever image in a row is tallest. 
+ This is because they are removed from the normal document flow.
+
+Inline-blocks don’t have this issue, since they remain in the document flow.
+*/
+.linear-gradient{
+    background:-webkit-linear-gradient(top,green,red);
+    background:-moz-linear-gradient(top,green,red);
+   background: -o-linear-gradient(top,green,red);
+  
+}
+div#gradient{
+    height:100px;
+    width:100px;
+    .linear-gradient;
+    transform: rotate(60deg);
+}

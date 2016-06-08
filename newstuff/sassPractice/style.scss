@@ -1,0 +1,47 @@
+@import "_partial1.scss";
+@import "node_modules/compass-sass-mixins/lib/compass";
+//using variables 
+$peachcolor :yellow;
+.mydiv{
+    height: 50px;
+    width:100px;
+    background-color:$peachcolor;
+}
+//using nesting
+ul{
+    border: 2px solid green;
+    li{
+        border: 1px solid blue;
+    }
+}
+//using mixin
+%dummymixin
+{
+    height:100px;
+    width:100px;
+}
+div#mixindiv{
+    @extend %dummymixin;
+    background-color: hotpink;
+}
+
+/*
+ Compass has a mixin called background. It's so robust, 
+ that you can pass just about whatever you want to that thing 
+ that it will output what you need. Images, gradients, and any 
+ combination of them comma-separated, and you'll get what you need (vendor prefixes and all).
+*/
+%linear-gradient{
+    @include background(
+     linear-gradient(top,green,red)
+      );
+    @include transform(
+       rotate(60deg)
+    );
+}
+div#gradient{
+    height:100px;
+    width:100px;
+    @extend %linear-gradient;
+   
+}

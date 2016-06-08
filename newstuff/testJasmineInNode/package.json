@@ -1,0 +1,14 @@
+{
+  "name": "testjasmineinnode",
+  "version": "1.0.0",
+  "description": "run jasmine from node_modules\.bin\jasmine",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\.bin\jasmine"
+  },
+  "author": "asha",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^2.4.1"
+  }
+}
